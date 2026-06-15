@@ -1,0 +1,18 @@
+{
+  "version": "0.1",
+  "type": "container",
+  "meta": {
+    "trigger": "nosana-credits-cli"
+  },
+  "ops": [
+    {
+      "type": "container/run",
+      "id": "tinyllama",
+      "args": {
+        "cmd": "'Write one short sentence about account-credit GPU jobs.'",
+        "image": "docker.io/jeisses/tinyllama:v2",
+        "gpu": true
+      }
+    }
+  ]
+}

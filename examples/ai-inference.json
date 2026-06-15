@@ -1,0 +1,21 @@
+{
+  "version": "0.1",
+  "type": "container",
+  "meta": {
+    "trigger": "nosana-credits-cli"
+  },
+  "ops": [
+    {
+      "type": "container/run",
+      "id": "ai-inference",
+      "args": {
+        "cmd": [
+          "python",
+          "-c",
+          "import math; x=[0.7,-1.2,0.3,2.1]; w=[0.9,-0.4,0.6,0.2]; b=-0.15; score=sum(a*b for a,b in zip(x,w))+b; prob=1/(1+math.exp(-score)); print(f'AI inference result: score={score:.4f}, probability={prob:.4f}')"
+        ],
+        "image": "python:3.11-slim"
+      }
+    }
+  ]
+}

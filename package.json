@@ -1,0 +1,42 @@
+{
+  "name": "nosana-credits-cli",
+  "version": "0.1.0",
+  "description": "Experimental Nosana CLI that submits jobs through account credits with a Nosana API key.",
+  "type": "module",
+  "bin": {
+    "nosana-credits": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "nosana",
+    "cli",
+    "credits",
+    "ai",
+    "gpu"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@nosana/kit": "^2.3.1",
+    "@solana/web3.js": "^1.98.2",
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
